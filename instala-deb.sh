@@ -38,5 +38,5 @@ else if [ $PIP -ne 0 ];then
 if [ $DL -ne 0 ];then
 	echo "Houve Problemas na instalação da dependência youtube-dl. Resintale Manualmente e aproveite o youDown"
 else
-	echo "O aplicativo foi instalado com sucesso!"
+	echo "As dependências foram instaladas com sucesso!"
 fi
