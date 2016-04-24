@@ -38,5 +38,21 @@ else if [ $PIP -ne 0 ];then
 if [ $DL -ne 0 ];then
 	echo "Houve Problemas na instalação da dependência youtube-dl. Resintale Manualmente e aproveite o youDown"
 else
-	echo "O aplicativo foi instalado com sucesso!"
+	echo "As dependências foram instaladas com sucesso!"
 fi
+
+echo "Copiando Arquivos Necessários"
+cp -rp .youDown /opt/
+
+echo "Criando Link Simbólicos"
+ln -s /opt/youDown/youdown /usr/bin/
+ln -s /opt/youDown/youdown.desktop /usr/share/applications/
+
+echo "Entregando Permissões"
+chmod +x /opt/youDown/* -R
+
+echo "Finalizando Instalação"
+sleep 2
+
+echo "Instalado com sucesso!"
+
