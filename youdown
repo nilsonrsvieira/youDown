@@ -1,0 +1,32 @@
+#!/bin/bash -x
+#_LOCAL=/home/$LOGNAME/Vídeos/
+#_NOME=$(zenity --title="YOUTUBE DOWN" --entry --text="Digite o nome do Arquivo sem espaços (Exemplo.mp4)")
+#_LINK=$(zenity --title="YOUTUBE DOWN" --entry --text="Cole o link do Youtube)")
+#
+#cd $_LOCAL
+#
+#youtube-dl -o $_NOME "$_LINK" | zenity --progress --title="YouDown" --text="Realizando download.. Ao final a janela Fechará" --pulsate --auto-close
+#zenity --info --text="Download concluído com sucesso"
+function FUNC_YOUDOWN () {
+zenity  --forms --title="youDown" \
+                --text="Aplicativos de Download de Vídeos do Youtube" \
+                --separator=";" \
+                --add-entry="Nome do Vídeo: " \
+                --add-entry="Link para Download: " \
+                --add-entry="Salvar em: " >> /home/$LOGNAME/.youDown
+}
+
+FUNC_YOUDOWN
+
+_NOME=$(cat /home/$LOGNAME/.youDown | cut -d";" -f1)
+_LINK=$(cat /home/$LOGNAME/.youDown | cut -d";" -f2) 
+_LOCAL=$(cat /home/$LOGNAME/.youDown | cut -d";" -f3)
+rm -rf /home/$LOGNAME/.youDown
+
+if [ $_NOME -z ] && [ $_LINK -z ] && [ $_LOCAL -z ]; then
+	zenity --error --text="Falta Parâmetros" ; FUNC_YOUDOWN
+else
+	cd $_LOCAL
+        youtube-dl -o $_NOME "$_LINK" --merge-output-format mp4 | zenity --progress --title="youDown" --text="Realizando download.. Ao final a janela Fechará" --pulsate --auto-close
+	cd -
+fi
