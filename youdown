@@ -1,12 +1,5 @@
 #!/bin/bash -x
-#_LOCAL=/home/$LOGNAME/Vídeos/
-#_NOME=$(zenity --title="YOUTUBE DOWN" --entry --text="Digite o nome do Arquivo sem espaços (Exemplo.mp4)")
-#_LINK=$(zenity --title="YOUTUBE DOWN" --entry --text="Cole o link do Youtube)")
-#
-#cd $_LOCAL
-#
-#youtube-dl -o $_NOME "$_LINK" | zenity --progress --title="YouDown" --text="Realizando download.. Ao final a janela Fechará" --pulsate --auto-close
-#zenity --info --text="Download concluído com sucesso"
+
 function FUNC_YOUDOWN () {
 zenity  --forms --title="youDown" \
                 --text="Aplicativos de Download de Vídeos do Youtube" \
