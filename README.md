@@ -6,15 +6,15 @@ Aplicativo para Linux voltado para Download de Vídeos do Youtube.<br/>
 
 <b>Instalação</b>
 
-Baixe o descompacte o arquivo baixado youDown.tar.gz
-tar -xvf youDown.tar.gz
+Baixe o descompacte o arquivo baixado youDown.tar.gz<br/>
+<i>tar -xvf youDown.tar.gz</i>
 
-Execute o instalador de acordo com sua Distribuição (Ubuntu/Variantes ou RedHat/Variantes).
-./instala-deb.sh
+Execute o instalador de acordo com sua Distribuição (Ubuntu/Variantes ou RedHat/Variantes).<br/>
+<i>./instala-deb.sh</i>
 
-Use o Aplicativo via terminal ou via lançador de aplicativos.
-TERMINAL:
-youDown
+Use o Aplicativo via terminal ou via lançador de aplicativos.<br/>
+TERMINAL:<br/>
+<i>youDown</i>
 
-NOTA: Lembre-se que a instalação deve ser feita como ROOT, mas a execução da aplicação deve ser feita pelo usuário comum, pois a aplicação utiliza variáveis de ambiente do usuário sem permissões.
+<b>NOTA:</b> Lembre-se que a instalação deve ser feita como ROOT, mas a execução da aplicação deve ser feita pelo usuário comum, pois a aplicação utiliza variáveis de ambiente do usuário sem permissões.
 
