@@ -1,4 +1,4 @@
-<b>YOUDOWN APP</b>
+                                  YOUDOWN APP
 
 Aplicativo para Linux voltado para Download de Vídeos do Youtube.<br/>
 <b>DESENVOLVIDO POR: </b> NILSON VIEIRA com a colaboração de GUILHERME RIAN.<br/>
