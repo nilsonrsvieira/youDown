@@ -5,15 +5,14 @@ zenity  --forms --title="youDown" \
                 --text="Aplicativos de Download de Vídeos do Youtube" \
                 --separator=";" \
                 --add-entry="Nome do Vídeo: " \
-                --add-entry="Link para Download: " \
-                --add-entry="Salvar em: " >> /home/$LOGNAME/.youDown
+                --add-entry="Link para Download: " >> /home/$LOGNAME/.youDown
 }
 
 FUNC_YOUDOWN
 
 _NOME=$(cat /home/$LOGNAME/.youDown | cut -d";" -f1)
 _LINK=$(cat /home/$LOGNAME/.youDown | cut -d";" -f2) 
-_LOCAL=$(cat /home/$LOGNAME/.youDown | cut -d";" -f3)
+_LOCAL=/home/$LOGNAME/Vídeos
 rm -rf /home/$LOGNAME/.youDown
 
 if [ $_NOME -z ] && [ $_LINK -z ] && [ $_LOCAL -z ]; then
@@ -21,5 +20,5 @@ if [ $_NOME -z ] && [ $_LINK -z ] && [ $_LOCAL -z ]; then
 else
 	cd $_LOCAL
         youtube-dl -o $_NOME "$_LINK" --merge-output-format mp4 | zenity --progress --title="youDown" --text="Realizando download.. Ao final a janela Fechará" --pulsate --auto-close
-	cd -
+        zenity --info --title=youDown --text="O arquivo está salvo dentro da pasta Vídeos"
 fi
