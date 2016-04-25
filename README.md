@@ -2,7 +2,7 @@ YOUDOWN APP
 
 Aplicativo para Linux voltado para Download de Vídeos do Youtube.
 +--------------------------------------------------------------------------+
-| DESENVOLVIDO POR: </b> NILSON VIEIRA com a colaboração de GUILHERME RIAN.|
+| DESENVOLVIDO POR: </b> NILSON VIEIRA com a colaboração de GUILHERME RIAN.<br/>|
 | REQUISITOS: ZENITY, YOUTUBE-DL E PYTHON PIP.                             |
 +--------------------------------------------------------------------------+
 <b>Instalação</b>
